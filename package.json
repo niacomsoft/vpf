@@ -39,5 +39,9 @@
   "homepage": "https://github.com/niacomsoft/vpf#readme",
   "devDependencies": {
     "standard-version": "^9.5.0"
-  }
+  },
+  "private": true,
+  "workspaces": [
+    "src/application"
+  ]
 }
