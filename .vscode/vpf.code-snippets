@@ -1,0 +1,40 @@
+{
+	"Script Header": {
+		"body": [
+			"// LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION. ",
+			"// COPYRIGHT © 2006 - $CURRENT_YEAR WANG YUCAI.",
+			"$1"
+		],
+		"description": "JavaScript or TypeScript Header Comments.",
+		"isFileTemplate": true,
+		"prefix": "vpf",
+		"scope": "javascript, typescript, css, scss"
+	},
+	"HTML Header": {
+		"body": [
+			"<!--",
+			"  ## LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION. ",
+			"  ## COPYRIGHT © 2006 - $CURRENT_YEAR WANG YUCAI.",
+			"-->",
+			"$1"
+		],
+		"description": "HTML or Vue Component Header Comments.",
+		"isFileTemplate": true,
+		"prefix": "vpf",
+		"scope": "html, htm, vue"
+	},
+	"Console SourceContext": {
+		"body": "{sourceContext: {method: '$1', parameters:{}, codebase: '$TM_FILENAME'}, runtimeContext: {}}",
+		"description": "Create Console SourceContext Instance",
+		"isFileTemplate": false,
+		"prefix": "vpf",
+		"scope": "vue, typescript, javascript"
+	},
+	"Vue Setup": {
+		"body": ["<script lang=\"ts\" setup>", "$1", "</script>"],
+		"description": "Vue Component Setup Grammar",
+		"isFileTemplate": false,
+		"prefix": "vpf",
+		"scope": "vue"
+	}
+}
