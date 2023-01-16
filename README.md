@@ -2,7 +2,41 @@
 
 *Presentation framework based on Vue 3.*
 
-## LICENSE
+----
+
+## 开始 GET STARTED!
+
+- **还原依赖 RESTORE**
+
+    ```powershell
+    ## 在 VPF 项目根目录下执行还原命令
+
+    ## npm
+    npm install
+
+    ## yarn
+    yarn install
+    ```
+- **本地调试 DEBUG**
+  - 桌面模式 DESKTOP MODE
+
+    ```powershell
+    ## 在 VPF 项目根目录下执行
+    
+    ## npm
+    npm run dev:desktop
+
+    ## yarn
+    yarn run dev:desktop
+    ```
+
+## 文档 DOCUMENTATION
+
+- **目录 Table Of Content**
+  - [LICENSE](LICENSE.md)
+  - [VPF PACKAGE DEPENDENCIES](docs/package-dependencies-description.md)
+
+## 开源协议 LICENSE
 
 ```
 THE MIT LICENSE

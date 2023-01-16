@@ -4,6 +4,7 @@
 
 ## Node
 dist/
+build/
 node_modules/
 *.css
 *.min.css
