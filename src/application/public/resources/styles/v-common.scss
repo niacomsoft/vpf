@@ -1,0 +1,161 @@
+@use "sass:math" as *;
+@use "sass:color" as *;
+
+$fontsize-base: 16;
+$fontsize-map: (
+	normal: $fontsize-base,
+	sm: 14,
+	xs: 12,
+	xxs: 10,
+	lg: 18,
+	xl: 20,
+	xxl: 22,
+	xxxl: 24,
+);
+$sizeprops-map: (
+	width: Width,
+	min-width: MinWidth,
+	max-width: MaxWidth,
+	height: Height,
+	min-height: MinHeight,
+	max-height: MaxHeight,
+	line-height: LineHeight,
+	padding: Padding,
+	margin: Margin,
+);
+$rectpoints-map: (
+	top: Top,
+	right: Right,
+	bottom: Bottom,
+	left: Left,
+);
+
+/** VPF Application Common Styles */
+.v {
+	@each $fontsize-name, $fontsize-value in $fontsize-map {
+		&Text_#{$fontsize-name} {
+			font: {
+				size: #{div($fontsize-value, $fontsize-base)}rem;
+			}
+		}
+	}
+
+	@each $fontweight in (Bold, Bolder) {
+		&#{$fontweight} {
+			font: {
+				weight: #{$fontweight};
+			}
+		}
+	}
+
+	&Italic {
+		font: {
+			style: italic;
+		}
+	}
+
+	@for $i from 0 through 100 {
+		@each $sizeprops-name, $sizeprops-alias in $sizeprops-map {
+			@if ($i == 0) {
+				@if ($sizeprops-name != line-height) and ($sizeprops-name != margin) and ($sizeprops-name != padding) {
+					&#{$sizeprops-alias}_0 {
+						#{$sizeprops-name}: 0;
+					}
+				} @else if ($sizeprops-name == line-height) {
+					&#{$sizeprops-alias}_0 {
+						@extend .vHeight_0;
+						line-height: 0;
+					}
+
+					&LineHeightOnly_0 {
+						line-height: 0;
+					}
+				} @else {
+					&#{$sizeprops-alias}_0 {
+						#{$sizeprops-name}: 0;
+					}
+
+					@each $point-name, $point-alias in $rectpoints-map {
+						&#{$sizeprops-alias + $point-alias}_0 {
+							#{$sizeprops-name}-#{$point-name}: 0;
+						}
+					}
+				}
+			} @else {
+				@if ($sizeprops-name != line-height) and ($sizeprops-name != margin) and ($sizeprops-name != padding) {
+					&#{$sizeprops-alias}_#{$i} {
+						#{$sizeprops-name}: #{div($i, $fontsize-base)}rem;
+					}
+					&#{$sizeprops-alias}_#{$i}p {
+						#{$sizeprops-name}: percentage($number: div($i, 100));
+					}
+				} @else if ($sizeprops-name == line-height) {
+					&#{$sizeprops-alias}_#{$i} {
+						@extend .vHeight_#{$i};
+						line-height: #{div($i, $fontsize-base)}rem;
+					}
+
+					&#{$sizeprops-alias}_#{$i}p {
+						@extend .vHeight_#{$i}p;
+						line-height: percentage($number: div($i, 100));
+					}
+
+					&LineHeightOnly_#{$i} {
+						line-height: #{div($i, $fontsize-base)}rem;
+					}
+
+					&LineHeightOnly_#{$i}p {
+						line-height: percentage($number: div($i, 100));
+					}
+				} @else {
+					&#{$sizeprops-alias}_#{$i} {
+						#{$sizeprops-name}: #{div($i, $fontsize-base)}rem;
+					}
+
+					&#{$sizeprops-alias}_#{$i}p {
+						#{$sizeprops-name}: percentage($number: div($i, 100));
+					}
+
+					@each $point-name, $point-alias in $rectpoints-map {
+						&#{$sizeprops-alias + $point-alias}_#{$i} {
+							#{$sizeprops-name}-#{$point-name}: #{div($i, $fontsize-base)}rem;
+						}
+
+						&#{$sizeprops-alias + $point-alias}_#{$i}p {
+							#{$sizeprops-name}-#{$point-name}: percentage($number: div($i, 100));
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@each $position-name, $position-alias in (absolute: Absolute, relative: Relative, fixed: Fixed) {
+		&#{$position-alias} {
+			position: #{$position-name};
+		}
+	}
+}
+
+html {
+	font: {
+		size: #{$fontsize-base}px;
+	}
+}
+
+html,
+body {
+	@extend .vHeight_100p;
+	@extend .vMargin_0;
+	@extend .vPadding_0;
+
+	background-color: var(--v-white);
+}
+
+* {
+	font: {
+		family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+	}
+
+	box-sizing: border-box;
+}

@@ -55,6 +55,30 @@ const bootConfigurator: VPFApplicationBootConfigurator = ({ mode }): UserConfigE
 						data: {
 							title: vpfEnvironmentVariables["VPF_BROWSER_TAB_TITLE"],
 						},
+						tags: [
+							{
+								injectTo: "head",
+								tag: "link",
+								attrs: {
+									role: "VPF Application Materials-Design Colors Variables",
+									href: "./resources/styles/v-colors.css",
+									rel: "stylesheet",
+									type: "text/css",
+									media: "all",
+								},
+							},
+							{
+								injectTo: "head",
+								tag: "link",
+								attrs: {
+									role: "VPF Application Common Styles",
+									href: "./resources/styles/v-common.css",
+									rel: "stylesheet",
+									type: "text/css",
+									media: "all",
+								},
+							},
+						],
 					},
 				},
 			],

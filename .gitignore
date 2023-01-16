@@ -6,5 +6,4 @@
 dist/
 build/
 node_modules/
-*.css
-*.min.css
+assets/**/*.css
