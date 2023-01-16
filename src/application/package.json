@@ -1,5 +1,6 @@
 {
   "name": "@vpf/application",
+  "description": "VPF Application based-on Vite & Vue & TypeScript",
   "private": true,
   "version": "1.0.0",
   "type": "module",

@@ -1,0 +1,30 @@
+{
+  "name": "@vpf/resources",
+  "version": "1.0.0",
+  "description": "VPF Multi-Languages Package.",
+  "main": "bin/index.js",
+  "types": "bin/index.d.ts",
+  "typings": "bin/index.d.ts",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "compile": "tsc --p ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/vpf.git"
+  },
+  "keywords": [
+    "Json",
+    "i18n",
+    "Resources",
+    "CultureInfo"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/vpf/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/vpf#readme"
+}
