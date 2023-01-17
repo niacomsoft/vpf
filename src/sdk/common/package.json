@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/niacomsoft/vpf#readme",
   "dependencies": {
-    "@vpf/resources": "^1.0.0"
+    "@vpf/resources": "^1.0.0",
+    "fast-deep-equal": "^3.1.3"
   }
 }
