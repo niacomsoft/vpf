@@ -2,9 +2,9 @@
   "name": "@vpf/resources",
   "version": "1.0.0",
   "description": "VPF Multi-Languages Package.",
-  "main": "bin/index.js",
-  "types": "bin/index.d.ts",
-  "typings": "bin/index.d.ts",
+  "main": "compile/index.js",
+  "types": "compile/index.d.ts",
+  "typings": "compile/index.d.ts",
   "devDependencies": {
     "typescript": "^4.9.4"
   },

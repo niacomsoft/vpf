@@ -2,9 +2,9 @@
   "name": "@vpf/common",
   "version": "1.0.0",
   "description": "VPF Application Common Blocks.",
-  "main": "bin/index.js",
-  "types": "bin/index.d.ts",
-  "typings": "bin/index.d.ts",
+  "main": "compile/index.js",
+  "types": "compile/index.d.ts",
+  "typings": "compile/index.d.ts",
   "devDependencies": {
     "@types/string-template": "^1.0.2",
     "typescript": "^4.9.4"

@@ -7,4 +7,5 @@ dist/
 build/
 node_modules/
 bin/
+compile/
 assets/**/*.css
