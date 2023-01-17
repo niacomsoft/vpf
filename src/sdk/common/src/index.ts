@@ -2,4 +2,6 @@
 // COPYRIGHT © 2006 - 2023 WANG YUCAI.
 
 /// <reference path="../typings/index.d.ts" />
-import "./global-extensions";
+import './global-extensions';
+
+export { createNullable, Nullable } from './core';

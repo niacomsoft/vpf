@@ -3,12 +3,6 @@
 
 export {};
 
-/**
- * 全局对象扩展类型定义。
- *
- * @packageDocumentation
- */
-
 declare global {
 	/**
 	 * @description 为 Object 类型提供的静态扩展方法。
