@@ -17,6 +17,8 @@
     "npm-version:major": "npm version major --no-git-tag-version"
   },
   "dependencies": {
+    "@vpf/common": "^1.0.0",
+    "@vpf/resources": "^1.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
