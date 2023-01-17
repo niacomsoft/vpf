@@ -1,7 +1,7 @@
 {
-  "name": "@vpf/resources",
+  "name": "@vpf/common",
   "version": "1.0.0",
-  "description": "VPF Multi-Languages Package.",
+  "description": "VPF Application Common Blocks.",
   "main": "bin/index.js",
   "types": "bin/index.d.ts",
   "typings": "bin/index.d.ts",
@@ -16,15 +16,17 @@
     "url": "git+https://github.com/niacomsoft/vpf.git"
   },
   "keywords": [
-    "Json",
-    "i18n",
-    "Resources",
-    "CultureInfo"
+    "CommonApplicationBlock",
+    "TypeScript",
+    "JavaScript"
   ],
   "author": "Wang Yucai",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/niacomsoft/vpf/issues"
   },
-  "homepage": "https://github.com/niacomsoft/vpf#readme"
+  "homepage": "https://github.com/niacomsoft/vpf#readme",
+  "dependencies": {
+    "@vpf/resources": "^1.0.0"
+  }
 }

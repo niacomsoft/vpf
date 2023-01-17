@@ -21,7 +21,7 @@
     "npm-version:patch": "npm version patch --no-git-tag-version --workspaces",
     "npm-version:minor": "npm version minor --no-git-tag-version --workspaces",
     "npm-version:major": "npm version major --no-git-tag-version --workspaces",
-    "dev:desktop": "npm run compile -w src/sdk/resources && npm run dev:desktop -w src/application"
+    "dev:desktop": "npm run compile -w src/sdk/resources && npm run compile -w src/sdk/common && npm run dev:desktop -w src/application"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
   "private": true,
   "workspaces": [
     "src/application",
-    "src/sdk/resources"
+    "src/sdk/resources",
+    "src/sdk/common"
   ]
 }
