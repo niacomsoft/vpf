@@ -4,14 +4,34 @@
 /// <reference path="lib.types.d.ts" />
 
 /**
+ * @description 定义了通用类型的接口。
+ * @author Wang Yucai
+ *
+ * @interface IFluentInterface
+ * @typedef {IFluentInterface}
+ */
+declare interface IFluentInterface {
+	/**
+	 * @description 获取类型名称。
+	 * @author Wang Yucai
+	 *
+	 * @returns {string}
+	 */
+	getType(): string;
+}
+
+
+/**
  * @description 定义了可为空的数据类型接口。
  * @author Wang Yucai
  *
  * @interface INullable
  * @typedef {INullable}
  * @template T
+ * @extends {IFluentInterface}
+ * @see {@link IFluentInterface}
  */
-declare interface INullable<T> {
+declare interface INullable<T> extends IFluentInterface {
 	/**
 	 * @description 获取 {@link NullableType<T>} 类型的对象实例或值，用于表示原始值。
 	 * @author Wang Yucai

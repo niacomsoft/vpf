@@ -4,3 +4,5 @@
 /// <reference path="../typings/index.d.ts" />
 
 import './native';
+
+export { Nullable, NullableFactory } from './nullable';
