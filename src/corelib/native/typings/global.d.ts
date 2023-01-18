@@ -74,4 +74,45 @@ declare global {
 		 */
 		isNullOrWhiteSpace(s: string): boolean;
 	}
+
+	/**
+	 * 为 Error 类型提供的静态扩展方法。
+	 * @author Wang Yucai
+	 *
+	 * @interface ErrorConstructor
+	 * @typedef {ErrorConstructor}
+	 */
+	interface ErrorConstructor {
+		/**
+		 * 创建一个 {@link TException} 类型的异常。
+		 * @author Wang Yucai
+		 *
+		 * @template TException 派生自 Error 的类型。
+		 * @param {sys.CreateRuntimeErrorDelegation} createError 创建异常信息的方法。
+		 * @param {?string} [message] 异常描述信息。
+		 * @param {...Array<any>} args 创建运行时异常的参数数组。
+		 * @returns {TException}
+		 * @see {@link sys.CreateRuntimeErrorDelegation}
+		 */
+		create<TException extends Error>(
+			createError: sys.CreateRuntimeErrorDelegation,
+			message?: string,
+			...args: Array<any>
+		): TException;
+	}
+
+	/**
+	 * 为 Error 类型提供的扩展方法。
+	 * @author Wang Yucai
+	 *
+	 * @interface Error
+	 * @typedef {Error}
+	 */
+	interface Error {
+		/**
+		 * 抛出异常。
+		 * @author Wang Yucai
+		 */
+		throw(): void;
+	}
 }

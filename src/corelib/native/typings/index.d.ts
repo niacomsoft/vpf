@@ -3,3 +3,4 @@
 
 /// <reference path="lib.types.d.ts" />
 /// <reference path="global.d.ts" />
+/// <reference path="lib.functions.d.ts" />
