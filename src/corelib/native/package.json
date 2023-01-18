@@ -1,0 +1,35 @@
+{
+  "name": "@vpf/corelib-native",
+  "version": "1.0.0",
+  "description": "JavaScript Native Types Extensions.",
+  "main": "compile/index.js",
+  "types": "compile/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/string-template": "^1.0.2",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "compile": "tsc --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niacomsoft/vpf.git"
+  },
+  "keywords": [
+    "Native",
+    "Extensions",
+    "TypeScript",
+    "JavaScript"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niacomsoft/vpf/issues"
+  },
+  "homepage": "https://github.com/niacomsoft/vpf#readme",
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3",
+    "string-template": "^1.0.0"
+  }
+}

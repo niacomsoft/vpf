@@ -36,5 +36,12 @@
 		"isFileTemplate": false,
 		"prefix": "vpf",
 		"scope": "vue"
+	},
+	"Console Group": {
+		"body": ["console.group(\"VPF: $TM_FILENAME\");", "$1", "console.groupEnd();"],
+		"description": "Group Browser Console",
+		"isFileTemplate": false,
+		"prefix": "vpf",
+		"scope": "vue, typescript, javascript"
 	}
 }

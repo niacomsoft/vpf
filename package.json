@@ -21,7 +21,9 @@
     "npm-version:patch": "npm version patch --no-git-tag-version --workspaces",
     "npm-version:minor": "npm version minor --no-git-tag-version --workspaces",
     "npm-version:major": "npm version major --no-git-tag-version --workspaces",
-    "dev:desktop": "npm run dev:desktop -w src/application"
+    "compile:corelib-native": "npm run compile -w src/corelib/native",
+    "compile": "npm run compile:corelib-native",
+    "dev:desktop": "npm run compile && npm run dev:desktop -w src/application"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,7 @@
   },
   "private": true,
   "workspaces": [
-    "src/application"
+    "src/application",
+    "src/corelib/native"
   ]
 }
