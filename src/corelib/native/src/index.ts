@@ -10,3 +10,4 @@
 /// <reference path="../typings/index.d.ts" />
 
 import './app-context';
+import './object-extensions';
