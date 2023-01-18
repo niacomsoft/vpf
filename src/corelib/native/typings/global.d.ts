@@ -115,4 +115,54 @@ declare global {
 		 */
 		throw(): void;
 	}
+
+	/**
+	 * 为 Number 类型提供的静态扩展方法。
+	 * @author Wang Yucai
+	 *
+	 * @interface NumberConstructor
+	 * @typedef {NumberConstructor}
+	 */
+	interface NumberConstructor {
+		/**
+		 * 尝试将字符串 {@link s} 转换为 Number 类型值。
+		 * @author Wang Yucai
+		 *
+		 * @param {string} s 数字字符串。
+		 * @returns {Promise<number>}
+		 */
+		tryParse(s: string): Promise<number>;
+
+		/**
+		 * 将字符串 {@link s} 转换为 Number 类型值。
+		 * @author Wang Yucai
+		 *
+		 * @param {string} s 数字字符串。
+		 * @param {sys.ParseNumericStringSuccessCallback} successCallback 转换成功后的回调方法。
+		 * @param {?sys.ParseNumericStringFailureCallback} [failureCallback] 转换失败后的回调方法。
+		 */
+		parse(
+			s: string,
+			successCallback: sys.ParseNumericStringSuccessCallback,
+			failureCallback?: sys.ParseNumericStringFailureCallback
+		): void;
+	}
+
+	/**
+	 * 为 Number 类型提供的扩展方法。
+	 * @author Wang Yucai
+	 *
+	 * @interface Number
+	 * @typedef {Number}
+	 */
+	interface Number {
+		/**
+		 * 将数字转换为货币字符串。
+		 * @author Wang Yucai
+		 *
+		 * @param {string} currencySymbol 货币符号。
+		 * @returns {string}
+		 */
+		toCurrency(currencySymbol: string): string;
+	}
 }

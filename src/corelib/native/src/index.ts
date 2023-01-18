@@ -13,3 +13,4 @@ import './app-context';
 import './object-extensions';
 import './string-extensions';
 import './error-extensions';
+import './number-extensions';

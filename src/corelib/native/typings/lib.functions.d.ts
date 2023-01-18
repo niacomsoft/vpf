@@ -21,4 +21,39 @@ declare namespace sys {
 		 */
 		(message?: string, ...args: Array<any>): TException;
 	}
+
+	/**
+	 * 数字字符串转换成功回调方法委托。
+	 * @author Wang Yucai
+	 *
+	 * @interface ParseNumericStringSuccessCallback
+	 * @typedef {ParseNumericStringSuccessCallback}
+	 */
+	interface ParseNumericStringSuccessCallback {
+		/**
+		 * 数字字符串转换成功回调方法委托。
+		 * @author Wang Yucai
+		 *
+		 * @param {number} value Number 类型值。
+		 */
+		(value: number): void;
+	}
+
+	/**
+	 * 数字字符串转换失败回调方法委托。
+	 * @author Wang Yucai
+	 *
+	 * @interface ParseNumericStringFailureCallback
+	 * @typedef {ParseNumericStringFailureCallback}
+	 */
+	interface ParseNumericStringFailureCallback {
+		
+		/**
+		 * 数字字符串转换失败回调方法委托。
+		 * @author Wang Yucai
+		 *
+		 * @param {string} s 原始字符串。
+		 */
+		(s: string): void;
+	}
 }
