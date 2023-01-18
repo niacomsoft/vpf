@@ -1,7 +1,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2006 - 2023 WANG YUCAI.
 
-var vpf_applicationCtx: NonNullable<sys.ApplicationContext>;
+var vpf_applicationCtx: NonNullable<ApplicationContext>;
 
 /**
  * 初始化应用程序上下文信息。
@@ -12,11 +12,11 @@ function initializeAppContext(): void {
 	 * 获取 VPF 应用程序默认值。
 	 * @author Wang Yucai
 	 *
-	 * @returns {NonNullable<sys.ApplicationDefaults>}
+	 * @returns {NonNullable<ApplicationDefaults>}
 	 * @see {@link NonNullable<T>}
-	 * @see {@link sys.ApplicationDefaults}
+	 * @see {@link ApplicationDefaults}
 	 */
-	function getApplicationDefaults(): NonNullable<sys.ApplicationDefaults> {
+	function getApplicationDefaults(): NonNullable<ApplicationDefaults> {
 		return {
 			DEFAULT_EMPTY_STRING: "",
 			DEFAULT_CULTURE_NAME: "zh-CN",
@@ -28,12 +28,12 @@ function initializeAppContext(): void {
 	 * 获取 VPF 应用程序上下文。
 	 * @author Wang Yucai
 	 *
-	 * @returns {NonNullable<sys.ApplicationContext>}
+	 * @returns {NonNullable<ApplicationContext>}
 	 * @see {@link NonNullable<T>}
-	 * @see {@link sys.ApplicationContext}
+	 * @see {@link ApplicationContext}
 	 * @see {@link getApplicationDefaults}
 	 */
-	function getApplicationContext(): NonNullable<sys.ApplicationContext> {
+	function getApplicationContext(): NonNullable<ApplicationContext> {
 		return {
 			DEFAULT: getApplicationDefaults(),
 		};

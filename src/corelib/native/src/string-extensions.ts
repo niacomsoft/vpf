@@ -6,8 +6,8 @@
  * @author Wang Yucai
  *
  * @returns {string}
- * @see {@link sys.ApplicationDefaults}
- * @see {@link sys.ApplicationDefaults.DEFAULT_EMPTY_STRING}
+ * @see {@link ApplicationDefaults}
+ * @see {@link ApplicationDefaults.DEFAULT_EMPTY_STRING}
  */
 String.empty = (): string => {
 	if (window) return window.vpf_applicationCtx.DEFAULT.DEFAULT_EMPTY_STRING;
