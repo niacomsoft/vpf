@@ -11,3 +11,4 @@
 
 import './app-context';
 import './object-extensions';
+import './string-extensions';
