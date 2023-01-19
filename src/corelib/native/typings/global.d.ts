@@ -12,7 +12,7 @@ declare global {
 	 * @see {@link NonNullable<T>}
 	 * @see {@link sys.ApplicationContext}
 	 */
-	var vpf_applicationCtx: NonNullable<sys.ApplicationContext>;
+	var VpfApplicationContext: NonNullable<sys.ApplicationContext>;
 
 	/**
 	 * 为 Object 类型提供的静态扩展方法。

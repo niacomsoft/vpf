@@ -1,7 +1,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2006 - 2023 WANG YUCAI.
 
-var vpf_applicationCtx: NonNullable<sys.ApplicationContext>;
+var VpfApplicationContext: NonNullable<sys.ApplicationContext>;
 
 /**
  * 初始化应用程序上下文信息。
@@ -35,7 +35,7 @@ function initializeAppContext(): void {
 	 */
 	function getApplicationContext(): NonNullable<sys.ApplicationContext> {
 		return {
-			DEFAULT: getApplicationDefaults(),
+			defaults: getApplicationDefaults(),
 		};
 	}
 
@@ -51,9 +51,9 @@ function initializeAppContext(): void {
 			sourceContext: { method: "initializeAppContext", parameters: {}, codebase: "app-context.ts" },
 			runtimeContext: {},
 		});
-		window.vpf_applicationCtx = getApplicationContext();
+		window.VpfApplicationContext = getApplicationContext();
 	} else {
-		vpf_applicationCtx = getApplicationContext();
+		VpfApplicationContext = getApplicationContext();
 	}
 
 	console.debug(`[DEBUG]: VPF 应用程序上下文初始化完成。详情参见：%o`, {

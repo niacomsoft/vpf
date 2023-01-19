@@ -52,7 +52,7 @@ declare namespace sys {
 		 * @type {?ApplicationDefaults}
 		 * @see {@link sys.ApplicationDefaults}
 		 */
-		readonly DEFAULT?: ApplicationDefaults;
+		readonly defaults?: ApplicationDefaults;
 	}
 
 	/**

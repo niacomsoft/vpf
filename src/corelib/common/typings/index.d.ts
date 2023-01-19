@@ -2,4 +2,4 @@
 // COPYRIGHT © 2006 - 2023 WANG YUCAI.
 
 /// <reference path="lib.types.d.ts" />
-/// <reference path="native.d.ts" />
+/// <reference path="lib.interfaces.d.ts" />

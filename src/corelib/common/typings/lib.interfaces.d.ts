@@ -2,4 +2,5 @@
 // COPYRIGHT © 2006 - 2023 WANG YUCAI.
 
 declare namespace sys {
+	namespace resources {}
 }

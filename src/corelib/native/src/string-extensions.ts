@@ -10,8 +10,8 @@
  * @see {@link sys.ApplicationDefaults.DEFAULT_EMPTY_STRING}
  */
 String.empty = (): string => {
-	if (window) return window.vpf_applicationCtx.DEFAULT.DEFAULT_EMPTY_STRING;
-	return vpf_applicationCtx.DEFAULT.DEFAULT_EMPTY_STRING;
+	if (window) return window.VpfApplicationContext.defaults.DEFAULT_EMPTY_STRING;
+	return VpfApplicationContext.defaults.DEFAULT_EMPTY_STRING;
 };
 
 /**
