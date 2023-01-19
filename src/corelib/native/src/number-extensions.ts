@@ -52,13 +52,13 @@ Number.tryParse = (s: string): Promise<number> => {
  * @author Wang Yucai
  *
  * @param {string} s 数字字符串。
- * @param {ParseNumericStringSuccessCallback} successCallback 转换成功后的回调方法。
- * @param {?ParseNumericStringFailureCallback} [failureCallback] 转换失败后的回调方法。
+ * @param {sys.ParseNumericStringSuccessCallback} successCallback 转换成功后的回调方法。
+ * @param {?sys.ParseNumericStringFailureCallback} [failureCallback] 转换失败后的回调方法。
  */
 Number.parse = (
 	s: string,
-	successCallback: ParseNumericStringSuccessCallback,
-	failureCallback?: ParseNumericStringFailureCallback
+	successCallback: sys.ParseNumericStringSuccessCallback,
+	failureCallback?: sys.ParseNumericStringFailureCallback
 ): void => {
 	Number.tryParse(s)
 		.then((value) => {

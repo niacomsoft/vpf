@@ -8,11 +8,11 @@ declare global {
 	 * VPF 应用程序上下文全局变量。
 	 * @author Wang Yucai
 	 *
-	 * @type {NonNullable<ApplicationContext>}
+	 * @type {NonNullable<sys.ApplicationContext>}
 	 * @see {@link NonNullable<T>}
-	 * @see {@link ApplicationContext}
+	 * @see {@link sys.ApplicationContext}
 	 */
-	var vpf_applicationCtx: NonNullable<ApplicationContext>;
+	var vpf_applicationCtx: NonNullable<sys.ApplicationContext>;
 
 	/**
 	 * 为 Object 类型提供的静态扩展方法。
@@ -48,8 +48,8 @@ declare global {
 		 * @author Wang Yucai
 		 *
 		 * @returns {string}
-		 * @see {@link ApplicationDefaults}
-		 * @see {@link ApplicationDefaults.DEFAULT_EMPTY_STRING}
+		 * @see {@link sys.ApplicationDefaults}
+		 * @see {@link sys.ApplicationDefaults.DEFAULT_EMPTY_STRING}
 		 */
 		empty(): string;
 
@@ -88,14 +88,14 @@ declare global {
 		 * @author Wang Yucai
 		 *
 		 * @template TException 派生自 Error 的类型。
-		 * @param {CreateRuntimeErrorDelegation} createError 创建异常信息的方法。
+		 * @param {sys.CreateRuntimeErrorDelegation} createError 创建异常信息的方法。
 		 * @param {?string} [message] 异常描述信息。
 		 * @param {...Array<any>} args 创建运行时异常的参数数组。
 		 * @returns {TException}
-		 * @see {@link CreateRuntimeErrorDelegation}
+		 * @see {@link sys.CreateRuntimeErrorDelegation}
 		 */
 		create<TException extends Error>(
-			createError: CreateRuntimeErrorDelegation,
+			createError: sys.CreateRuntimeErrorDelegation,
 			message?: string,
 			...args: Array<any>
 		): TException;
@@ -138,13 +138,13 @@ declare global {
 		 * @author Wang Yucai
 		 *
 		 * @param {string} s 数字字符串。
-		 * @param {ParseNumericStringSuccessCallback} successCallback 转换成功后的回调方法。
-		 * @param {?ParseNumericStringFailureCallback} [failureCallback] 转换失败后的回调方法。
+		 * @param {sys.ParseNumericStringSuccessCallback} successCallback 转换成功后的回调方法。
+		 * @param {?sys.ParseNumericStringFailureCallback} [failureCallback] 转换失败后的回调方法。
 		 */
 		parse(
 			s: string,
-			successCallback: ParseNumericStringSuccessCallback,
-			failureCallback?: ParseNumericStringFailureCallback
+			successCallback: sys.ParseNumericStringSuccessCallback,
+			failureCallback?: sys.ParseNumericStringFailureCallback
 		): void;
 	}
 

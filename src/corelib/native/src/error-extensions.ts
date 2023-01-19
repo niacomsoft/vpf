@@ -6,14 +6,14 @@
  * @author Wang Yucai
  *
  * @template TException 派生自 Error 的类型。
- * @param {CreateRuntimeErrorDelegation} createError 创建异常信息的方法。
+ * @param {sys.CreateRuntimeErrorDelegation} createError 创建异常信息的方法。
  * @param {?string} [message] 异常描述信息。
  * @param {...Array<any>} args 创建运行时异常的参数数组。
  * @returns {TException}
- * @see {@link CreateRuntimeErrorDelegation}
+ * @see {@link sys.CreateRuntimeErrorDelegation}
  */
 Error.create = function <TException extends Error>(
-	createError: CreateRuntimeErrorDelegation<TException>,
+	createError: sys.CreateRuntimeErrorDelegation<TException>,
 	message?: string,
 	...args: Array<any>
 ): TException {
